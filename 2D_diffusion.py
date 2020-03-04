@@ -1,3 +1,7 @@
+### This program solve the 2D diffusion equation using
+### An explicit time advancement scheme (Euler)
+### And a second order finite differences scheme (Spatial)
+
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib import cm
