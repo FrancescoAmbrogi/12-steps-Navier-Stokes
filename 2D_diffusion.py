@@ -33,7 +33,7 @@ u[int(.75 / dy):int(1.25 / dy + 1), int(.75 / dx):int(1.25 / dx + 1)]=2
 fig = plt.figure(figsize=(11,7), dpi=100)
 ax = fig.gca(projection='3d')
 X,Y = np.meshgrid(x,y)
-surf = ax.plot_surface(X,Y,u,rstride=1,cstride=1,cmap=cm.viridis,linewidth=0,antialiased=False)
+surf = ax.plot_surface(X,Y,u,rstride=1,cstride=1,cmap=cm.coolwarm,linewidth=0,antialiased=False)
 
 ax.set_xlim([0, 2])
 ax.set_ylim([0, 2])
@@ -57,7 +57,9 @@ for n in range(nt+1):
 
 fig = plt.figure(figsize=(11,7), dpi=100)
 ax = fig.gca(projection='3d')
-surf = ax.plot_surface(X, Y, u[:], rstride=1, cstride=1, cmap=cm.viridis, linewidth=0, antialiased=False)
+surf = ax.plot_surface(X, Y, u[:], rstride=1, cstride=1, cmap=cm.coolwarm, linewidth=0, antialiased=False)
 ax.set_zlim([1, 2.5])
 ax.set_xlabel('X')
 ax.set_ylabel('Y');
+fig.colorbar(surf, shrink=0.5, aspect=5)
+plt.show()
