@@ -1,5 +1,5 @@
 ### Created by Francesco Ambrogi upon Lorena Barba notes
-
+### 5th March 2020
 ### This program solve the 2D diffusion equation using
 ### An explicit time advancement scheme (Euler)
 ### And a second order finite differences scheme (Spatial)
@@ -41,24 +41,23 @@ ax.set_zlim([1, 2.5])
 
 ### Beginning of the calculation with a function
 u[int(.75 / dy):int(1.25 / dy + 1), int(.75 / dx):int(1.25 / dx + 1)]=2
-    
+
 for n in range(nt+1):
     row, col = u.shape
     for j in range(1,row-1):
-        for i in range(1,col-1): 
+        for i in range(1,col-1):
             un = u.copy()
             u[j,i] = un[j,i] + (nu*dt/dx**2)*(un[j,i+1] -2*un[j,i] + un[j,i-1]) + (nu*dt/dy**2)*(un[j+1,i] -2*un[j,i] + un[j-1,i])
-                
+
             ### Boundary conditions
             u[0, :] = 1
             u[-1,:] = 1
             u[:,0] = 1
             u[:,-1] = 1
-    
+
 fig = plt.figure(figsize=(11,7), dpi=100)
 ax = fig.gca(projection='3d')
 surf = ax.plot_surface(X, Y, u[:], rstride=1, cstride=1, cmap=cm.viridis, linewidth=0, antialiased=False)
 ax.set_zlim([1, 2.5])
 ax.set_xlabel('X')
 ax.set_ylabel('Y');
-
