@@ -1,3 +1,5 @@
+### Created by Francesco Ambrogi upon Lorena Barba notes
+
 ### This program solve the 2D diffusion equation using
 ### An explicit time advancement scheme (Euler)
 ### And a second order finite differences scheme (Spatial)
