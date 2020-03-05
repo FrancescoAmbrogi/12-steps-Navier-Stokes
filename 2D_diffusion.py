@@ -5,7 +5,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib import cm
-import time
+
 
 ### Variable declaration
 nx = 101    # x grid number
@@ -38,7 +38,6 @@ ax.set_ylim([0, 2])
 ax.set_zlim([1, 2.5])
 
 ### Beginning of the calculation with a function
-t = time.time()
 u[int(.75 / dy):int(1.25 / dy + 1), int(.75 / dx):int(1.25 / dx + 1)]=2
     
 for n in range(nt+1):
@@ -60,4 +59,4 @@ surf = ax.plot_surface(X, Y, u[:], rstride=1, cstride=1, cmap=cm.viridis, linewi
 ax.set_zlim([1, 2.5])
 ax.set_xlabel('X')
 ax.set_ylabel('Y');
-print('The calculation with loops took: ' + str('{0:2f}'.format(time.time() -t)) + 's')
+
