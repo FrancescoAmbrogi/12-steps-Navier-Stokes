@@ -1,6 +1,10 @@
 ### This program aim at resolving the 2D Laplace equation
 ### Created by Francesco Ambrogi on March the 5th
 
+### IMPORTANT there calculation using array is correct
+### There are some issues in the matrix calculation
+### That need to be fixed.
+
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib import cm
