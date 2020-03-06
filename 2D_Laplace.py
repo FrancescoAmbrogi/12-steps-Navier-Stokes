@@ -1,7 +1,7 @@
 ### This program aim at resolving the 2D Laplace equation
-### Created by Francesco Ambrogi on March the 5th
+### Created by Francesco Ambrogi on March the 5th 2020
 
-### IMPORTANT there calculation using array is correct
+### IMPORTANT the calculation using array is correct
 ### There are some issues in the matrix calculation
 ### That need to be fixed.
 
@@ -66,7 +66,7 @@ dy = 2 / (ny - 1)
 # Initaial condition
 p = np.zeros((nx,ny))
 
-# plotting aids
+# plotting features
 x = np.linspace(0, 2, nx)
 y = np.linspace(0, 1, ny)
 
