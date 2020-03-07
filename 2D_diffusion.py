@@ -7,6 +7,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib import cm
+from mpl_toolkits.mplot3d import Axes3D   # New library required for 3D plots
 
 
 ### Variable declaration
@@ -62,4 +63,4 @@ ax.set_zlim([1, 2.5])
 ax.set_xlabel('X')
 ax.set_ylabel('Y');
 fig.colorbar(surf, shrink=0.5, aspect=5)
-plt.show()
+plt.show();

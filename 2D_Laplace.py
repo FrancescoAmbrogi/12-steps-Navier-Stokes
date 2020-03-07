@@ -8,6 +8,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib import cm
+from mpl_toolkits.mplot3d import Axes3D   # New library required for 3D plots
 
 
 ### Let's create a function
@@ -79,7 +80,7 @@ p[-1,:] = p[-2, :] # dp/dy = 0 @ y = 1
 plot2D(x, y, p)
 p = laplace2D(p, y, dx, dy, 1e-4)
 plot2D(x, y, p)
-plt.show()
+plt.show();
         
     
     
