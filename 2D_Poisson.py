@@ -65,11 +65,11 @@ for n in range(nt):
             p[:,-1] = 0
     
 def plot2D(x,y,p):
-    fig = plt.figure(figsize=(11,7), dpi=100)
+    fig = plt.figure(figsize=(22,14), dpi=100)
     ax = fig.gca(projection='3d')
     X,Y = np.meshgrid(x,y)
     surf = ax.plot_surface(X,Y,p[:], rstride=1,cstride=1,cmap=cm.coolwarm,linewidth=0,antialiased=False)
-    fig.colorbar(surf, shrink=0.5, aspect=5)
+    fig.colorbar(surf, shrink=0.5, aspect=10)
     ax.view_init(30,225)
     ax.set_xlabel('X')
     ax.set_ylabel('Y')
